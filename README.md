@@ -9,7 +9,6 @@
   preventing unnecessary load on your server.
 
   ## Description
- 
   Similar to its more established cousin, honeypot, BotBattler-JS is a 
   non-intrusive approach to prevent forms on your website from being abused by
   bots aiming to spam your server with inappropriate comments, like advertising,
@@ -52,7 +51,7 @@
   detected. BotBattler-JS is a 100% clientside, early-detection solution.
   Clientside detection means that the server cannot log spam activity as 
   part of the spam detection process. Logging of spam detection may be added
-  to BotBattler in the futuere, as a separate task that posts trapped bot
+  to BotBattler-JS in the future, as a separate task that posts trapped bot
   information to the server for logging & archiving.
  
   A second strategy used in conjunction with the above is measuring how many
@@ -61,6 +60,8 @@
   most likely a bot at work -- or a person entering rubbish quickly, which 
   we're also happy to block!
  
+  ## FAQs
+  
   **What if the bot "browser"/robot software has JS disabled?**   
   With BotBattler-JS the server destination is initially NOT on the form. It
   gets set after a few seconds, or, when JavaScript is switched off, not at all.
@@ -70,9 +71,8 @@
     <noscript><p><em>
       Javascript is disabled on this page. You must enable Javascript to submit the form.
     </em></p></noscript>
- 
-  ## FAQS
-   
+  
+
   **How is BotBattler-JS different from honeypot?**  
   Rather than checking if the hidden field remains empty, BotBattler checks if
   the hidden field has a *specific* value.
@@ -81,11 +81,18 @@
   value the form refuses to be submitted!
   The specific value is a random non-guessable, non-reusable number that is
   different every time the page is served. Only when the bot has 1) Javascript
-  turned on, 2) does NOT attempt to fill out the invisible REQUIRED field and
+  turned on, 2) does *not* attempt to fill out the invisible *required* field and
   3) waits at least 5 seconds (configurable) before pressing Submit, will 
   the bot get through like a human would. That's a tough ask for a bot and
-  most will fail.
- 
+  most bots will fail.
+    
+  **Can I use BotBattler-JS in combination with other spam blockers?**  
+  Yes you can. Be aware that most spam blockers operate on the serverside,
+  whereas BotBattler-JS is a clientside solution. This means that when 
+  BotBattler traps a bot, the server and therefore any serverside spam blockers
+  will never know about it and will have no work to do.
+  Just listen to the sound of silence!
+  
   **Console error**  
   In the Chrome and Safari browsers you may see a message like this in the 
   console:  
@@ -94,9 +101,3 @@
   
   You can safely ignore this message.
    
-  **Can I use BotBattler-JS in combination with other spam blockers?**  
-  Yes you can. Be aware that most spam blockers operate on the serverside,
-  whereas BotBattler-JS is a clientside solution. This means that when 
-  BotBattler traps a bot, the server and therefore any serverside spam blockers
-  will never know about it and will have no work to do.
-  Just listen to the sound of silence! 
