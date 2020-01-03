@@ -39,25 +39,16 @@
   defence - in fact, it may be the only defence you'll need.
  
   **How does it work?**  
-  BotBattler-JS employs a couple of strategies. 
-  
-  The first is to add an extra field to your forms that is invisible to humans.
-  Bots unaware that the field is hidden, are tempted to fill out most fields
-  on the form, including the hidden field. This then traps the bots into
-  detection.
-  In general, spam detection can be implemented serverside or clientside. 
-  Clientside (i.e. via Javascript) is usually preferred, as it doesn't require
-  the spammy form data making a trip to the server before the attack can be 
-  detected. BotBattler-JS is a 100% clientside, early-detection solution.
+  BotBattler employs a number of strategies.
+
+  First, it operates 100% clientside (i.e. via Javascript). This means that BotBattler doesn't require the spammy data to first make a trip to your server (or a third-party API) before the attack can be detected.
+
+  BotBattler adds an extra field to your forms that is invisible to humans. Bots, unaware that the field is hidden, are tempted to fill out most fields on the form, including the hidden field. This then traps the bots into detection. This technique is similar to the honeypot approach. What's different though is that BotBattler doesn't check for the field to be empty. Rather it insists the field has a <em>specific</em> value. This then allows the field to be marked as <em>required</em>, forming an extra temptation for a bot to populate the field, and seal its fate, as without a required value the form will refuse to be submitted!
+The specific value is a random non-guessable, non-reusable number that is different every time the page is served.
  
-  A second strategy used in conjunction with the above is measuring how many
-  seconds pass between the time the page was loaded and the time the form was
-  submitted. If the form was populated in, say, less than 5 seconds, it was
-  most likely a bot at work -- or a person entering rubbish quickly, which 
-  we're also happy to block!
+  A final strategy used in conjunction with the above is measuring, clientside, how many seconds pass between the time the page was loaded and the time the form was submitted. If the form was populated in, say, less than 5 seconds (configurable), it was most likely a bot at work -- or a person entering rubbish quickly, which  we're also happy to block!
  
   ## FAQs
-  
   **What if the bot "browser"/robot software has JavaScript disabled?**   
   With BotBattler-JS the server destination is initially NOT on the form. It
   gets set after a few seconds, or, when JavaScript is switched off, not at all.
