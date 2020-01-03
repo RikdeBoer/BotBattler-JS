@@ -14,8 +14,8 @@
   bots aiming to spam your server with inappropriate comments, like advertising,
   as well as malicious registration or login attempts.
   
-  To use BotBattler-JS on a form on your website, drop the botbattler.min.js in
-  the root (or some subdirectory) of your website. Then insert the code below 
+  To use BotBattler-JS on a form on your website, drop the file botbattler.min.js
+  in the root (or some subdirectory) of your website. Then insert the code below 
   before the closing body tag on the page that has the form you wish to protect.
  
     <script src="botbattler.min.js"></script>
@@ -49,10 +49,6 @@
   Clientside (i.e. via Javascript) is usually preferred, as it doesn't require
   the spammy form data making a trip to the server before the attack can be 
   detected. BotBattler-JS is a 100% clientside, early-detection solution.
-  Clientside detection means that the server cannot log spam activity as 
-  part of the spam detection process. Logging of spam detection may be added
-  to BotBattler-JS in the future, as a separate task that posts trapped bot
-  information to the server for logging & archiving.
  
   A second strategy used in conjunction with the above is measuring how many
   seconds pass between the time the page was loaded and the time the form was
@@ -62,7 +58,7 @@
  
   ## FAQs
   
-  **What if the bot "browser"/robot software has JS disabled?**   
+  **What if the bot "browser"/robot software has JavaScript disabled?**   
   With BotBattler-JS the server destination is initially NOT on the form. It
   gets set after a few seconds, or, when JavaScript is switched off, not at all.
   Therefore if JavaScript is turned off, form submission will go nowhere.
