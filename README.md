@@ -13,7 +13,13 @@
   non-intrusive approach to prevent forms on your website from being abused by
   bots aiming to spam your server with inappropriate comments, like advertising,
   as well as malicious registration or login attempts.
+  Unlike CAPTCHA-type solutions, BotBattler-JS, works "under the wraps" and does 
+  not affect the form workflow or user exerience in any way.
+  This combined with the fact that BotBattler-JS is a 100% clientside solution
+  that is easy to install on your site, makes it a great first line of
+  defence - in fact, it may be the only defence you'll need.
   
+  ## Installation  
   To use BotBattler-JS on a form on your website, drop the file botbattler.min.js
   in the root (or some subdirectory) of your website. Then insert the code below 
   before the closing body tag on the page that has the form you wish to protect.
@@ -29,16 +35,11 @@
   "action" attribute, e.g. "contact.php". Then set the action attribute to
   "//nowhere".
   BotBattler will auto-replace this action attribute a few seconds after the
-  page is loaded. However, if JavaScript is switched off this won't occur and
-  the server will not receive any form data.
+  page is loaded. However, if JavaScript is switched off, which it often is
+  in the case of a bot, this won't occur and the server will not receive any
+  form data.
  
-  Unlike CAPTCHA-type solutions, BotBattler-JS, like honeypot, works "under the 
-  wraps" and does not affect the form workflow or user exerience in any way.
-  This combined with the fact that BotBattler-JS is a 100% clientside solution
-  that is easy to implement on your site, makes it a great first line of
-  defence - in fact, it may be the only defence you'll need.
- 
-  **How does it work?**  
+  ## How does it work?   
   BotBattler employs a number of strategies.
 
   First, it operates 100% clientside (i.e. via Javascript). This means that BotBattler doesn't require the spammy data to first make a trip to your server (or a third-party API) before the attack can be detected.
