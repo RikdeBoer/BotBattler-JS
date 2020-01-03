@@ -5,16 +5,17 @@
   BotBattler-JS is an effective, lightweight (1.4k in size), anti-spam solution
   for forms. It requires no thrid-party site or API. As this is a 100%
   clientside solution, it detects spam the moment the submit button is
-  pressed, without the spammy data travelling across the Internet, thus 
-  preventing unnecessary load on your server.
+  pressed, without the spammy data first travelling across the Internet
+  to be processed, thus preventing unnecessary load on your server.
 
   ## Description
-  Similar to its more established cousin, honeypot, BotBattler-JS is a 
-  non-intrusive approach to prevent forms on your website from being abused by
-  bots aiming to spam your server with inappropriate comments, like advertising,
-  as well as malicious registration or login attempts.
+  BotBattler-JS is a non-intrusive approach to prevent forms on your website 
+  from being abused by bots aiming to spam your server with inappropriate 
+  comments, like advertising, or malicious registration and login attempts.
+  
   Unlike CAPTCHA-type solutions, BotBattler-JS, works "under the wraps" and does 
   not affect the form workflow or user exerience in any way.
+  
   This combined with the fact that BotBattler-JS is a 100% clientside solution
   that is easy to install on your site, makes it a great first line of
   defence - in fact, it may be the only defence you'll need.
@@ -40,11 +41,14 @@
   form data.
  
   ## How does it work?   
-  BotBattler employs a number of strategies.
+  BotBattler-JS employs a number of strategies.
 
-  First, it operates 100% clientside (i.e. via Javascript). This means that BotBattler doesn't require the spammy data to first make a trip to your server (or a third-party API) before the attack can be detected.
+  First, it operates 100% clientside (i.e. via Javascript). This means that 
+  BotBattler-JS doesn't require the spammy data to first make a trip to your 
+  server (or a third-party API) before the attack can be detected.
 
-  BotBattler adds an extra field to your forms that is invisible to humans. Bots, unaware that the field is hidden, are tempted to fill out most fields on the form, including the hidden field. This then traps the bots into detection. This technique is similar to the honeypot approach. What's different though is that BotBattler doesn't check for the field to be empty. Rather it insists the field has a <em>specific</em> value. This then allows the field to be marked as <em>required</em>, forming an extra temptation for a bot to populate the field, and seal its fate, as without a required value the form will refuse to be submitted!
+  BotBattler-JS adds an extra field to your forms that is invisible to humans. 
+  Bots, unaware that the field is hidden, are tempted to fill out most fields on the form, including the hidden field. This then traps the bots into detection. This technique is similar to the honeypot approach. What's different though is that BotBattler doesn't check for the field to be empty. Rather it insists the field has a <em>specific</em> value. This then allows the field to be marked as <em>required</em>, forming an extra temptation for a bot to populate the field, and seal its fate, as without a required value the form will refuse to be submitted!
 The specific value is a random non-guessable, non-reusable number that is different every time the page is served.
  
   A final strategy used in conjunction with the above is measuring, clientside, how many seconds pass between the time the page was loaded and the time the form was submitted. If the form was populated in, say, less than 5 seconds (configurable), it was most likely a bot at work -- or a person entering rubbish quickly, which  we're also happy to block!
