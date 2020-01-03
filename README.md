@@ -100,4 +100,20 @@
   *"An invalid form control with name='botbattler-name' is not focusable."*   
   
   You can safely ignore this message.
-   
+  
+  **Multiple forms on the same page**   
+  You need one botbattler() call for each form on the page.
+  For 2nd, 3rd ... forms you need to specify not only the first argument, 
+  the action, but also the remaining two arguments, minElapsedSecs (integer
+  or float) and formId (string). Here's an example:
+ 
+    <script src="js/botbattler.min.js"></script>
+    <script>
+      document.addEventListener('readystatechange', _ => {
+        if (document.readyState == 'complete') {
+          botbattler('contact.php')
+          botbattler('register.php', 4, 'registration-form')
+          botbattler('/login', 4, 'login-form')
+        }
+      })
+    </script>
