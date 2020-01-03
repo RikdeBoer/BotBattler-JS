@@ -58,26 +58,12 @@ The specific value is a random non-guessable, non-reusable number that is differ
     <noscript><p><em>
       Javascript is disabled on this page. You must enable Javascript to submit the form.
     </em></p></noscript>
-  
-
-  **How is BotBattler-JS different from honeypot?**  
-  Rather than checking if the hidden field remains empty, BotBattler checks if
-  the hidden field has a *specific* value.
-  This approach allows the hidden field to be marked as "required", which is
-  an extra temptation for a bot to populate the field, as without a required
-  value the form refuses to be submitted!
-  The specific value is a random non-guessable, non-reusable number that is
-  different every time the page is served. Only when the bot has 1) Javascript
-  turned on, 2) does *not* attempt to fill out the invisible *required* field and
-  3) waits at least 5 seconds (configurable) before pressing Submit, will 
-  the bot get through like a human would. That's a tough ask for a bot and
-  most bots will fail.
     
   **Can I use BotBattler-JS in combination with other spam blockers?**  
   Yes you can. Be aware that most spam blockers operate on the serverside,
   whereas BotBattler-JS is a clientside solution. This means that when 
-  BotBattler traps a bot, the server and therefore any serverside spam blockers
-  will never know about it and will have no work to do.
+  BotBattler-JS traps a bot, the server and therefore any serverside spam 
+  blockers will never know about it and will have no work to do.
   Just listen to the sound of silence!
   
   **Console error**  
