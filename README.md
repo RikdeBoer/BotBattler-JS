@@ -16,7 +16,7 @@
   
   To use BotBattler-JS on a form on your website, drop the botbattler.min.js in
   the root (or some subdirectory) of your website. Then insert the code below 
-  before the closing body tag on the page that has the form you wish toprotect.
+  before the closing body tag on the page that has the form you wish to protect.
  
     <script src="botbattler.min.js"></script>
     <script>
@@ -29,17 +29,17 @@
   "action" attribute, e.g. "contact.php". Then set the action attribute to
   "//nowhere".
   BotBattler will auto-replace this action attribute a few seconds after the
-  page is loaded. However, if JS is switched off this won't occur and the
-  server will not receive any form data.
+  page is loaded. However, if JavaScript is switched off this won't occur and
+  the server will not receive any form data.
  
-  Unlike CAPTCHA-type solutions, BotBattler, like honeypot, works "under the 
+  Unlike CAPTCHA-type solutions, BotBattler-JS, like honeypot, works "under the 
   wraps" and does not affect the form workflow or user exerience in any way.
-  This combined with the fact that BotBattler is a 100% clientside solution
+  This combined with the fact that BotBattler-JS is a 100% clientside solution
   that is easy to implement on your site, makes it a great first line of
   defence - in fact, it may be the only defence you'll need.
  
   **How does it work?**  
-  BotBattler employs a couple of strategies. 
+  BotBattler-JS employs a couple of strategies. 
   
   The first is to add an extra field to your forms that is invisible to humans.
   Bots unaware that the field is hidden, are tempted to fill out most fields
