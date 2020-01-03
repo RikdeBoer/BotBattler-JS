@@ -2,7 +2,7 @@
   # BotBattler-JS  
   *Invisible early-detection clientside spam protection for forms*  
  
-  BotBattler-JS is an effective, lightweight (1k in size), anti-spam solution
+  BotBattler-JS is an effective, lightweight (1.4k in size), anti-spam solution
   for forms. It requires no thrid-party site or API. As this is a 100%
   clientside solution, it detects spam the moment the submit button is
   pressed, without the spammy data travelling across the Internet, thus 
