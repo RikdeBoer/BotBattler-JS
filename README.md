@@ -54,6 +54,11 @@ The specific value is a random non-guessable, non-reusable number that is differ
   A final strategy used in conjunction with the above is measuring, clientside, how many seconds pass between the time the page was loaded and the time the form was submitted. If the form was populated in, say, less than 5 seconds (configurable), it was most likely a bot at work -- or a person entering rubbish quickly, which  we're also happy to block!
  
   ## FAQs
+  **Do I need jQuery or any other library or framework?**  
+  Nope. You only need botbattler.min.js. It is a standalone, minimised 
+  pure javascript file. It is only 1.4k in size and it does not pull in any 
+  additional resources.
+
   **What if the bot "browser"/robot software has JavaScript disabled?**   
   With BotBattler-JS the server destination is initially NOT on the form. It
   gets set after a few seconds, or, when JavaScript is switched off, not at all.
