@@ -32,9 +32,9 @@
       })
     </script>
  
-  Replace fileOrPathToPostTo by the value you see in your form tag for the 
-  "action" attribute, e.g. "contact.php". Then set the action attribute to
-  "//nowhere".
+  Replace *fileOrPathToPostTo* by the value you see in your form tag for the 
+  "action" attribute, e.g. "contact.php". Then set the form action attribute
+  to *//nowhere*.
   BotBattler will auto-replace this action attribute a few seconds after the
   page is loaded. However, if JavaScript is switched off, which it often is
   in the case of a bot, this won't occur and the server will not receive any
